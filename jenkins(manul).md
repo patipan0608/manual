@@ -1,6 +1,6 @@
 # คู่มือ jenkins automated
 ## ขั้นแรก (เพื่อทดสอบ)
-### - สร้าง VMขึ้นมา2ตัวเพื่อเป็นเครื่อง jenkins และเครื่อง webserver
+### - สร้าง VM ขึ้นมา2ตัวเพื่อเป็นเครื่อง jenkins และเครื่อง webserver
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87vm.jpg)
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%84%E0%B9%88%E0%B8%B21.jpg) 
 # 
@@ -52,7 +52,7 @@ sudo systemctl status jenkins
 ~~~
 sudo systemctl start jenkins
 ~~~
-### - ทำการเปิดพอท8080 หรือที่ต้องการจะใช้
+### - ทำการเปิดพอท 8080 หรือที่ต้องการจะใช้
 ~~~
 sudo ufw enable
 ~~~
