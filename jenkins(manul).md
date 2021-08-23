@@ -89,7 +89,8 @@ sudo npm install npm@latest -g
 ~~~
 sudo npm install -g @angular/cli
 ~~~
-## เครื่อง websever
+# เครื่องที่2 
+### -ติดตั้งเป็นเครื่อง websever ด้วยวิธีดังนี้
 ### - ติดตั้ง angular
 ### - ติดตั้ง node js
 ~~~
