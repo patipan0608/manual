@@ -1,4 +1,5 @@
 # คู่มือ jenkins automated
+## ในการทดลองนี้ได้ทำการสร้าง ubuntu vm ขึ้นมา2เครื่อง ให้เครื่อง 1. เป็น jenkins ip192.268.23.129 2. เป็น web server 192.168.23.130 ติดตั้ง angular ในทั้ง2เครื่องเพื่อให้ทำงานร่วมกันได้ จากนั้นทำให้ jenkins เข้าถึง project บน github ได้ต้องทำการชี้ url และผูก user ก่อนจึงจะทำงานร่วมกันได้ดังวิธีในคู่มือ จากนั้นเมื่อมีการ push code new version ขึ้นไปที่ project การทำงานจะเริ่มต้น jenkins จะทำการ -pull -build -sent to production sussec
 ## ขั้นแรก (เพื่อทดสอบ)
 ### - สร้าง VM ขึ้นมา2ตัวเพื่อเป็นเครื่อง jenkins และเครื่อง web server
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87vm.jpg)
@@ -78,7 +79,7 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/setupjk4.3.jpg)
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/setupjk4.4.jpg)
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/setupjk4.5.jpg)
-### - ติดตั้ง Angular เพื่อให้ Jenkins ใช้คำสั่งได้
+### - ติดตั้ง Node.js และอัพเดท npm เพื่อให้ Jenkins ใช้คำสั่งได้
 ~~~
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -86,12 +87,8 @@ sudo apt-get install -y nodejs
 ~~~
 sudo npm install npm@latest -g
 ~~~
-~~~
-sudo npm install -g @angular/cli
-~~~
 # เครื่องที่2 
 ### -ติดตั้งเป็นเครื่อง web sever ด้วยวิธีดังนี้
-### - ติดตั้ง Angular
 ### - ติดตั้ง Node.js
 ~~~
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
@@ -101,22 +98,6 @@ sudo apt-get install -y nodejs
 ~~~
 sudo npm install npm@latest -g
 ~~~
-### - ติดตั้ง Angular CLI
-~~~
-sudo npm install -g @angular/cli
-~~~
-### - สร้าง workspace
-~~~
-ng new my-app
-~~~
-### - run
-~~~
-cd my-app
-~~~
-~~~
-ng serve --open
-~~~
-### - ทำการเปิดพอท 4200 จากนั้นเข้าเช็คด้วย IP:4200
 ### - ติดตั้ง NginX
 ### - update apt และติดตั้ง NginX
 ~~~
@@ -185,3 +166,4 @@ sudo passwd jenkins
 ### - เพิ่ม webhook 
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/webhook1fix.jpg)
 ### - ในกรอบที่วงไว้ให้ใส่ IP เครื่อง web server ตามหลังด้วย “github-webhook/”
+## คู่มือการใช้ jenkins นี้ทำขึ้นเนื่องจากเห็นได้ว่าการ deploy แบบปกตินั้นเปลืองเวลาและยุ่งยากจึงศึกษาการใช้ jenkins เพื่อทำ automated deploy สำหรับใช้ในงานต่างๆโดยการศึกษา jenkins ในครั้งนี้จะเป็นการนำ jenkins มาทดลองทำ automated deploy จากเครื่อง jenkins ไปเครื่อง web server โดยใช้การ push ผ่าน gitlab แล้วตั้งทริกเกอร์ให้ jenkins นั้นเริ่มทำการไป pull จาก gitlab เมื่อมีการ push หลังจาก jenkins ทำการ pull ลงมาจะทำการ build แล้วส่งไปยัง part ปลายทางที่อยู่ที่เครื่อง web server 
