@@ -1,5 +1,5 @@
 # คู่มือ Jenkins automated
-## ในการทดลองนี้ได้ทำการสร้าง ubuntu vm ขึ้นมา2เครื่อง ให้เครื่อง 1. เป็น Jenkins ip192.268.23.129 2. เป็น web server 192.168.23.130 ติดตั้ง angular ในทั้ง2เครื่องเพื่อให้ทำงานร่วมกันได้ จากนั้นทำให้ Jenkins เข้าถึง project บน github ได้ต้องทำการชี้ url และผูก user ก่อนจึงจะทำงานร่วมกันได้ดังวิธีในคู่มือ จากนั้นเมื่อมีการ push code new version ขึ้นไปที่ project การทำงานจะเริ่มต้น Jenkins จะทำการ -pull -build -sent to production sussecc
+## ในการทดลองนี้ได้ทำการสร้าง ubuntu vm ขึ้นมา2เครื่อง ให้เครื่อง 1. เป็น Jenkins ip192.268.23.129 2. เป็น web server 192.168.23.130 ติดตั้ง Node.js และอัพเดท npm ในทั้ง2เครื่องเพื่อให้ทำงานร่วมกันได้ จากนั้นทำให้ Jenkins เข้าถึง project บน github ได้ต้องทำการชี้ url และผูก user ก่อนจึงจะทำงานร่วมกันได้ดังวิธีในคู่มือ จากนั้นเมื่อมีการ push code new version ขึ้นไปที่ project การทำงานจะเริ่มต้น Jenkins จะทำการ -pull -build -sent to production sussecc
 ## ขั้นแรก (เพื่อทดสอบ)
 ### - สร้าง VM ขึ้นมา2ตัวเพื่อเป็นเครื่อง jenkins และเครื่อง web server
 ![Editor preferences pane](https://github.com/patipan0608/manul/blob/main/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87vm.jpg)
