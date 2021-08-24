@@ -25,7 +25,7 @@
 # เครื่องที่ 1
 ### - ติดตั้งเป็นเครื่อง Jenkins ด้วยวิธีต่อไปนี้
 ### - ติดตั้ง JAVA เวอร์ชั่น8ขึ้นไปเพื่อใช้ Jenkins
-### - เช็คเวอร์ชั่นของ JAVA ด้วยคำสั่ง
+### - ตรวจสอบเวอร์ชั่นของ JAVA ด้วยคำสั่ง
 ~~~
 java --version
 ~~~
@@ -33,7 +33,7 @@ java --version
 ~~~
 sudo apt install openjdk-11-jre-headless
 ~~~
-### - ติดตั้ง jenkins ด้วยชุดคำสั่งนี้
+### - ติดตั้ง Jenkins ด้วยชุดคำสั่งนี้
 ~~~
 wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 ~~~
