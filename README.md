@@ -1,2 +1,0 @@
-# manul
-manul jenkins
